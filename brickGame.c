@@ -3,6 +3,7 @@
 int main()
 {
     int tests;
+    int x = 1;
     
     scanf("%d", &tests);
     while(tests--){
@@ -10,20 +11,18 @@ int main()
         int plyers; 
         int ageOfLider;
         int age;
-
-        int x = 1;
-        int sum = 0;
-        scanf("%d",plyers);  //ISSO
+        
+        scanf("%d", &plyers);
+        int collect = (plyers-1)/2;
         while(plyers--){
-            scanf("%d", &age);//ISSO
-            sum+=age;
+            scanf("%d", &age);
+            if(plyers == collect){
+                ageOfLider = age;
+            }
             
         }
 
-        ageOfLider = sum / plyers;
-        printf("Case %d: %d\n", x, ageOfLider);
-        x++;
-
+        printf("Case %d: %d\n", x++, ageOfLider);
 
     }
 
